@@ -1,0 +1,1120 @@
+openapi: 3.0.0
+info:
+  title: musala soft
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+components:
+  securitySchemes:
+    noauthAuth:
+      type: http
+      scheme: noauth
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []
+tags:
+  - name: Auhthentication
+  - name: Posts
+  - name: Users
+paths:
+  /api/v1/auth/authenticate:
+    post:
+      tags:
+        - Auhthentication
+      summary: Authenticate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: deshan.sh@gmail.com
+                password: '1234'
+      security:
+        - noauthAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 04:55:36 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body:
+                  token: >-
+                    eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXNoYW5AZ21haWwuY29tIiwiaWF0IjoxNzE2Njk5MzM2LCJleHAiOjE3MTY3MDA3NzZ9.9nUlSSCjrHXtSx0IfaOfEK6J4q2vOJ8CppI5dZojHDA
+                status: Success
+                message: User Authenticated
+  /api/v1/auth/register:
+    post:
+      tags:
+        - Auhthentication
+      summary: Registration
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstname: deshan
+                lastname: salitha
+                email: deshan.sh@gmail.com
+                password: '1234'
+      security:
+        - noauthAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 04:56:25 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body:
+                  token: >-
+                    eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXNoYW4uc2hAZ21haWwuY29tIiwiaWF0IjoxNzE2Njk5Mzg1LCJleHAiOjE3MTY3MDA4MjV9.rzkUqp2N73smSMkjGc9sa0yoaU_nPf9he8SMDwcm-IE
+                status: Success
+                message: User Authenticated
+  /posts/:
+    get:
+      tags:
+        - Posts
+      summary: get All Posts
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 04:57:01 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body:
+                  - postId: 1
+                    text: >-
+                      Hi network! Started to work as software Engineer at
+                      Musalasoft!
+                    visibility: PUBLIC
+                    postedOn: '2024-05-25T20:56:28.058555'
+                    createdBy:
+                      id: 1
+                      firstname: deshan
+                      lastname: salitha
+                      email: deshan@gmail.com
+                      password: >-
+                        $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                      isRepresentative: false
+                      isGroup: false
+                      friends: []
+                      followers: []
+                      group: null
+                      role: USER
+                      enabled: true
+                      authorities:
+                        - authority: USER
+                      username: deshan@gmail.com
+                      accountNonLocked: true
+                      accountNonExpired: true
+                      credentialsNonExpired: true
+                    likes: []
+                  - postId: 2
+                    text: >-
+                      Hi network! Promoted as senior software Engineer at
+                      Musalasoft!
+                    visibility: PUBLIC
+                    postedOn: '2024-05-25T20:56:28.077308'
+                    createdBy:
+                      id: 1
+                      firstname: deshan
+                      lastname: salitha
+                      email: deshan@gmail.com
+                      password: >-
+                        $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                      isRepresentative: false
+                      isGroup: false
+                      friends: []
+                      followers: []
+                      group: null
+                      role: USER
+                      enabled: true
+                      authorities:
+                        - authority: USER
+                      username: deshan@gmail.com
+                      accountNonLocked: true
+                      accountNonExpired: true
+                      credentialsNonExpired: true
+                    likes: []
+                  - postId: 3
+                    text: >-
+                      Hi network! I'm happy to announce to day is 3rd work
+                      anniversary at Musalasoft!
+                    visibility: PUBLIC
+                    postedOn: '2024-05-25T20:56:28.089654'
+                    createdBy:
+                      id: 1
+                      firstname: deshan
+                      lastname: salitha
+                      email: deshan@gmail.com
+                      password: >-
+                        $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                      isRepresentative: false
+                      isGroup: false
+                      friends: []
+                      followers: []
+                      group: null
+                      role: USER
+                      enabled: true
+                      authorities:
+                        - authority: USER
+                      username: deshan@gmail.com
+                      accountNonLocked: true
+                      accountNonExpired: true
+                      credentialsNonExpired: true
+                    likes: []
+                status: Success
+                message: Successfully fetched
+  /posts/1:
+    get:
+      tags:
+        - Posts
+      summary: get All Posts By UserId
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 04:58:01 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body:
+                  - postId: 1
+                    text: >-
+                      Hi network! Started to work as software Engineer at
+                      Musalasoft!
+                    visibility: PUBLIC
+                    postedOn: '2024-05-25T20:56:28.058555'
+                    createdBy:
+                      id: 1
+                      firstname: deshan
+                      lastname: salitha
+                      email: deshan@gmail.com
+                      password: >-
+                        $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                      isRepresentative: false
+                      isGroup: false
+                      friends: []
+                      followers: []
+                      group: null
+                      role: USER
+                      enabled: true
+                      authorities:
+                        - authority: USER
+                      username: deshan@gmail.com
+                      accountNonLocked: true
+                      accountNonExpired: true
+                      credentialsNonExpired: true
+                    likes: []
+                  - postId: 2
+                    text: >-
+                      Hi network! Promoted as senior software Engineer at
+                      Musalasoft!
+                    visibility: PUBLIC
+                    postedOn: '2024-05-25T20:56:28.077308'
+                    createdBy:
+                      id: 1
+                      firstname: deshan
+                      lastname: salitha
+                      email: deshan@gmail.com
+                      password: >-
+                        $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                      isRepresentative: false
+                      isGroup: false
+                      friends: []
+                      followers: []
+                      group: null
+                      role: USER
+                      enabled: true
+                      authorities:
+                        - authority: USER
+                      username: deshan@gmail.com
+                      accountNonLocked: true
+                      accountNonExpired: true
+                      credentialsNonExpired: true
+                    likes: []
+                  - postId: 3
+                    text: >-
+                      Hi network! I'm happy to announce to day is 3rd work
+                      anniversary at Musalasoft!
+                    visibility: PUBLIC
+                    postedOn: '2024-05-25T20:56:28.089654'
+                    createdBy:
+                      id: 1
+                      firstname: deshan
+                      lastname: salitha
+                      email: deshan@gmail.com
+                      password: >-
+                        $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                      isRepresentative: false
+                      isGroup: false
+                      friends: []
+                      followers: []
+                      group: null
+                      role: USER
+                      enabled: true
+                      authorities:
+                        - authority: USER
+                      username: deshan@gmail.com
+                      accountNonLocked: true
+                      accountNonExpired: true
+                      credentialsNonExpired: true
+                    likes: []
+                status: Success
+                message: Successfully fetched
+    post:
+      tags:
+        - Posts
+      summary: Create Post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                text: testsdgsg
+                visibility: PUBLIC
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 04:58:52 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body:
+                  postId: 4
+                  text: testsdgsg
+                  visibility: PUBLIC
+                  postedOn: '2024-05-26T10:28:51.9900761'
+                  createdBy:
+                    id: 1
+                    firstname: deshan
+                    lastname: salitha
+                    email: deshan@gmail.com
+                    password: >-
+                      $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                    isRepresentative: false
+                    isGroup: false
+                    friends: []
+                    followers: []
+                    group: null
+                    role: USER
+                    enabled: true
+                    authorities:
+                      - authority: USER
+                    username: deshan@gmail.com
+                    accountNonLocked: true
+                    accountNonExpired: true
+                    credentialsNonExpired: true
+                  likes: null
+                status: Success
+                message: Post Successfully Created
+  /posts/wall/1:
+    get:
+      tags:
+        - Posts
+      summary: Wall
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 05:00:31 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body:
+                  - postId: 4
+                    text: testsdgsg
+                    visibility: PUBLIC
+                    postedOn: '2024-05-26T10:28:51.990076'
+                    createdBy:
+                      id: 1
+                      firstname: deshan
+                      lastname: salitha
+                      email: deshan@gmail.com
+                      password: >-
+                        $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                      isRepresentative: false
+                      isGroup: false
+                      friends: []
+                      followers: []
+                      group: null
+                      role: USER
+                      enabled: true
+                      authorities:
+                        - authority: USER
+                      username: deshan@gmail.com
+                      accountNonLocked: true
+                      accountNonExpired: true
+                      credentialsNonExpired: true
+                    likes: []
+                  - postId: 3
+                    text: >-
+                      Hi network! I'm happy to announce to day is 3rd work
+                      anniversary at Musalasoft!
+                    visibility: PUBLIC
+                    postedOn: '2024-05-25T20:56:28.089654'
+                    createdBy:
+                      id: 1
+                      firstname: deshan
+                      lastname: salitha
+                      email: deshan@gmail.com
+                      password: >-
+                        $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                      isRepresentative: false
+                      isGroup: false
+                      friends: []
+                      followers: []
+                      group: null
+                      role: USER
+                      enabled: true
+                      authorities:
+                        - authority: USER
+                      username: deshan@gmail.com
+                      accountNonLocked: true
+                      accountNonExpired: true
+                      credentialsNonExpired: true
+                    likes: []
+                  - postId: 2
+                    text: >-
+                      Hi network! Promoted as senior software Engineer at
+                      Musalasoft!
+                    visibility: PUBLIC
+                    postedOn: '2024-05-25T20:56:28.077308'
+                    createdBy:
+                      id: 1
+                      firstname: deshan
+                      lastname: salitha
+                      email: deshan@gmail.com
+                      password: >-
+                        $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                      isRepresentative: false
+                      isGroup: false
+                      friends: []
+                      followers: []
+                      group: null
+                      role: USER
+                      enabled: true
+                      authorities:
+                        - authority: USER
+                      username: deshan@gmail.com
+                      accountNonLocked: true
+                      accountNonExpired: true
+                      credentialsNonExpired: true
+                    likes: []
+                  - postId: 1
+                    text: >-
+                      Hi network! Started to work as software Engineer at
+                      Musalasoft!
+                    visibility: PUBLIC
+                    postedOn: '2024-05-25T20:56:28.058555'
+                    createdBy:
+                      id: 1
+                      firstname: deshan
+                      lastname: salitha
+                      email: deshan@gmail.com
+                      password: >-
+                        $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                      isRepresentative: false
+                      isGroup: false
+                      friends: []
+                      followers: []
+                      group: null
+                      role: USER
+                      enabled: true
+                      authorities:
+                        - authority: USER
+                      username: deshan@gmail.com
+                      accountNonLocked: true
+                      accountNonExpired: true
+                      credentialsNonExpired: true
+                    likes: []
+                status: Success
+                message: Successfully fetched
+  /posts/wall/like/1:
+    post:
+      tags:
+        - Posts
+      summary: like
+      requestBody:
+        content: {}
+      parameters:
+        - name: userId
+          in: query
+          schema:
+            type: integer
+          example: '2'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 05:00:49 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body: 1
+                status: Success
+                message: Successfully fetched
+  /posts/wall/unlike/1:
+    post:
+      tags:
+        - Posts
+      summary: unlike
+      requestBody:
+        content: {}
+      parameters:
+        - name: userId
+          in: query
+          schema:
+            type: integer
+          example: '1'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 05:02:59 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body: 1
+                status: Success
+                message: Successfully fetched
+  /users/:
+    get:
+      tags:
+        - Users
+      summary: Get All Users
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 05:04:00 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body:
+                  - id: 1
+                    firstname: deshan
+                    lastname: salitha
+                    email: deshan@gmail.com
+                    password: >-
+                      $2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm
+                    isRepresentative: false
+                    isGroup: false
+                    friends: []
+                    followers: []
+                    group: null
+                    role: USER
+                    enabled: true
+                    authorities:
+                      - authority: USER
+                    username: deshan@gmail.com
+                    accountNonLocked: true
+                    accountNonExpired: true
+                    credentialsNonExpired: true
+                  - id: 2
+                    firstname: deshan
+                    lastname: salitha
+                    email: deshan.sh@gmail.com
+                    password: >-
+                      $2a$10$YXpbSkHQeKODR5YwBGBZB.kqZVpqu68bYk8rjjI6q8/2PZ7jWGTdK
+                    isRepresentative: false
+                    isGroup: false
+                    friends: []
+                    followers: []
+                    group: null
+                    role: USER
+                    enabled: true
+                    authorities:
+                      - authority: USER
+                    username: deshan.sh@gmail.com
+                    accountNonLocked: true
+                    accountNonExpired: true
+                    credentialsNonExpired: true
+                status: success
+                message: fetched
+  /users/1/friends/2:
+    post:
+      tags:
+        - Users
+      summary: Add friend
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 05:26:13 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body: 1
+                status: Success
+                message: Successfully added the friend
+  /users/1/followers/2:
+    post:
+      tags:
+        - Users
+      summary: Add followers
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Sun, 26 May 2024 05:26:54 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                body: 1
+                status: Success
+                message: Successfully followed the friend

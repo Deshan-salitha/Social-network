@@ -1,0 +1,1309 @@
+{
+	"info": {
+		"_postman_id": "beb1bf08-6b0b-47c5-bee5-f5b54ea06c47",
+		"name": "musala soft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21244209"
+	},
+	"item": [
+		{
+			"name": "Auhthentication",
+			"item": [
+				{
+					"name": "Authenticate",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"deshan.sh@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"authenticate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Authenticate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"deshan@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/auth/authenticate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 04:55:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXNoYW5AZ21haWwuY29tIiwiaWF0IjoxNzE2Njk5MzM2LCJleHAiOjE3MTY3MDA3NzZ9.9nUlSSCjrHXtSx0IfaOfEK6J4q2vOJ8CppI5dZojHDA\"\n    },\n    \"status\": \"Success\",\n    \"message\": \"User Authenticated\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Registration",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"deshan\",\r\n    \"lastname\":\"salitha\",\r\n    \"email\":\"deshan.sh@gmail.com\",\r\n    \"password\":\"1234\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Registration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstname\":\"deshan\",\r\n    \"lastname\":\"salitha\",\r\n    \"email\":\"deshan.sh@gmail.com\",\r\n    \"password\":\"1234\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 04:56:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXNoYW4uc2hAZ21haWwuY29tIiwiaWF0IjoxNzE2Njk5Mzg1LCJleHAiOjE3MTY3MDA4MjV9.rzkUqp2N73smSMkjGc9sa0yoaU_nPf9he8SMDwcm-IE\"\n    },\n    \"status\": \"Success\",\n    \"message\": \"User Authenticated\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "get All Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/posts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get All Posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/posts/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 04:57:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": [\n        {\n            \"postId\": 1,\n            \"text\": \"Hi network! Started to work as software Engineer at Musalasoft!\",\n            \"visibility\": \"PUBLIC\",\n            \"postedOn\": \"2024-05-25T20:56:28.058555\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstname\": \"deshan\",\n                \"lastname\": \"salitha\",\n                \"email\": \"deshan@gmail.com\",\n                \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n                \"isRepresentative\": false,\n                \"isGroup\": false,\n                \"friends\": [],\n                \"followers\": [],\n                \"group\": null,\n                \"role\": \"USER\",\n                \"enabled\": true,\n                \"authorities\": [\n                    {\n                        \"authority\": \"USER\"\n                    }\n                ],\n                \"username\": \"deshan@gmail.com\",\n                \"accountNonLocked\": true,\n                \"accountNonExpired\": true,\n                \"credentialsNonExpired\": true\n            },\n            \"likes\": []\n        },\n        {\n            \"postId\": 2,\n            \"text\": \"Hi network! Promoted as senior software Engineer at Musalasoft!\",\n            \"visibility\": \"PUBLIC\",\n            \"postedOn\": \"2024-05-25T20:56:28.077308\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstname\": \"deshan\",\n                \"lastname\": \"salitha\",\n                \"email\": \"deshan@gmail.com\",\n                \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n                \"isRepresentative\": false,\n                \"isGroup\": false,\n                \"friends\": [],\n                \"followers\": [],\n                \"group\": null,\n                \"role\": \"USER\",\n                \"enabled\": true,\n                \"authorities\": [\n                    {\n                        \"authority\": \"USER\"\n                    }\n                ],\n                \"username\": \"deshan@gmail.com\",\n                \"accountNonLocked\": true,\n                \"accountNonExpired\": true,\n                \"credentialsNonExpired\": true\n            },\n            \"likes\": []\n        },\n        {\n            \"postId\": 3,\n            \"text\": \"Hi network! I'm happy to announce to day is 3rd work anniversary at Musalasoft!\",\n            \"visibility\": \"PUBLIC\",\n            \"postedOn\": \"2024-05-25T20:56:28.089654\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstname\": \"deshan\",\n                \"lastname\": \"salitha\",\n                \"email\": \"deshan@gmail.com\",\n                \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n                \"isRepresentative\": false,\n                \"isGroup\": false,\n                \"friends\": [],\n                \"followers\": [],\n                \"group\": null,\n                \"role\": \"USER\",\n                \"enabled\": true,\n                \"authorities\": [\n                    {\n                        \"authority\": \"USER\"\n                    }\n                ],\n                \"username\": \"deshan@gmail.com\",\n                \"accountNonLocked\": true,\n                \"accountNonExpired\": true,\n                \"credentialsNonExpired\": true\n            },\n            \"likes\": []\n        }\n    ],\n    \"status\": \"Success\",\n    \"message\": \"Successfully fetched\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get All Posts By UserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get All Posts By UserId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/posts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 04:58:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": [\n        {\n            \"postId\": 1,\n            \"text\": \"Hi network! Started to work as software Engineer at Musalasoft!\",\n            \"visibility\": \"PUBLIC\",\n            \"postedOn\": \"2024-05-25T20:56:28.058555\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstname\": \"deshan\",\n                \"lastname\": \"salitha\",\n                \"email\": \"deshan@gmail.com\",\n                \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n                \"isRepresentative\": false,\n                \"isGroup\": false,\n                \"friends\": [],\n                \"followers\": [],\n                \"group\": null,\n                \"role\": \"USER\",\n                \"enabled\": true,\n                \"authorities\": [\n                    {\n                        \"authority\": \"USER\"\n                    }\n                ],\n                \"username\": \"deshan@gmail.com\",\n                \"accountNonLocked\": true,\n                \"accountNonExpired\": true,\n                \"credentialsNonExpired\": true\n            },\n            \"likes\": []\n        },\n        {\n            \"postId\": 2,\n            \"text\": \"Hi network! Promoted as senior software Engineer at Musalasoft!\",\n            \"visibility\": \"PUBLIC\",\n            \"postedOn\": \"2024-05-25T20:56:28.077308\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstname\": \"deshan\",\n                \"lastname\": \"salitha\",\n                \"email\": \"deshan@gmail.com\",\n                \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n                \"isRepresentative\": false,\n                \"isGroup\": false,\n                \"friends\": [],\n                \"followers\": [],\n                \"group\": null,\n                \"role\": \"USER\",\n                \"enabled\": true,\n                \"authorities\": [\n                    {\n                        \"authority\": \"USER\"\n                    }\n                ],\n                \"username\": \"deshan@gmail.com\",\n                \"accountNonLocked\": true,\n                \"accountNonExpired\": true,\n                \"credentialsNonExpired\": true\n            },\n            \"likes\": []\n        },\n        {\n            \"postId\": 3,\n            \"text\": \"Hi network! I'm happy to announce to day is 3rd work anniversary at Musalasoft!\",\n            \"visibility\": \"PUBLIC\",\n            \"postedOn\": \"2024-05-25T20:56:28.089654\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstname\": \"deshan\",\n                \"lastname\": \"salitha\",\n                \"email\": \"deshan@gmail.com\",\n                \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n                \"isRepresentative\": false,\n                \"isGroup\": false,\n                \"friends\": [],\n                \"followers\": [],\n                \"group\": null,\n                \"role\": \"USER\",\n                \"enabled\": true,\n                \"authorities\": [\n                    {\n                        \"authority\": \"USER\"\n                    }\n                ],\n                \"username\": \"deshan@gmail.com\",\n                \"accountNonLocked\": true,\n                \"accountNonExpired\": true,\n                \"credentialsNonExpired\": true\n            },\n            \"likes\": []\n        }\n    ],\n    \"status\": \"Success\",\n    \"message\": \"Successfully fetched\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"testsdgsg\",\r\n    \"visibility\":\"PUBLIC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"text\":\"testsdgsg\",\r\n    \"visibility\":\"PUBLIC\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/posts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 04:58:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": {\n        \"postId\": 4,\n        \"text\": \"testsdgsg\",\n        \"visibility\": \"PUBLIC\",\n        \"postedOn\": \"2024-05-26T10:28:51.9900761\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"firstname\": \"deshan\",\n            \"lastname\": \"salitha\",\n            \"email\": \"deshan@gmail.com\",\n            \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n            \"isRepresentative\": false,\n            \"isGroup\": false,\n            \"friends\": [],\n            \"followers\": [],\n            \"group\": null,\n            \"role\": \"USER\",\n            \"enabled\": true,\n            \"authorities\": [\n                {\n                    \"authority\": \"USER\"\n                }\n            ],\n            \"username\": \"deshan@gmail.com\",\n            \"accountNonLocked\": true,\n            \"accountNonExpired\": true,\n            \"credentialsNonExpired\": true\n        },\n        \"likes\": null\n    },\n    \"status\": \"Success\",\n    \"message\": \"Post Successfully Created\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Wall",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/posts/wall/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"wall",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Wall",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/posts/wall/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										"wall",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 05:00:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": [\n        {\n            \"postId\": 4,\n            \"text\": \"testsdgsg\",\n            \"visibility\": \"PUBLIC\",\n            \"postedOn\": \"2024-05-26T10:28:51.990076\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstname\": \"deshan\",\n                \"lastname\": \"salitha\",\n                \"email\": \"deshan@gmail.com\",\n                \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n                \"isRepresentative\": false,\n                \"isGroup\": false,\n                \"friends\": [],\n                \"followers\": [],\n                \"group\": null,\n                \"role\": \"USER\",\n                \"enabled\": true,\n                \"authorities\": [\n                    {\n                        \"authority\": \"USER\"\n                    }\n                ],\n                \"username\": \"deshan@gmail.com\",\n                \"accountNonLocked\": true,\n                \"accountNonExpired\": true,\n                \"credentialsNonExpired\": true\n            },\n            \"likes\": []\n        },\n        {\n            \"postId\": 3,\n            \"text\": \"Hi network! I'm happy to announce to day is 3rd work anniversary at Musalasoft!\",\n            \"visibility\": \"PUBLIC\",\n            \"postedOn\": \"2024-05-25T20:56:28.089654\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstname\": \"deshan\",\n                \"lastname\": \"salitha\",\n                \"email\": \"deshan@gmail.com\",\n                \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n                \"isRepresentative\": false,\n                \"isGroup\": false,\n                \"friends\": [],\n                \"followers\": [],\n                \"group\": null,\n                \"role\": \"USER\",\n                \"enabled\": true,\n                \"authorities\": [\n                    {\n                        \"authority\": \"USER\"\n                    }\n                ],\n                \"username\": \"deshan@gmail.com\",\n                \"accountNonLocked\": true,\n                \"accountNonExpired\": true,\n                \"credentialsNonExpired\": true\n            },\n            \"likes\": []\n        },\n        {\n            \"postId\": 2,\n            \"text\": \"Hi network! Promoted as senior software Engineer at Musalasoft!\",\n            \"visibility\": \"PUBLIC\",\n            \"postedOn\": \"2024-05-25T20:56:28.077308\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstname\": \"deshan\",\n                \"lastname\": \"salitha\",\n                \"email\": \"deshan@gmail.com\",\n                \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n                \"isRepresentative\": false,\n                \"isGroup\": false,\n                \"friends\": [],\n                \"followers\": [],\n                \"group\": null,\n                \"role\": \"USER\",\n                \"enabled\": true,\n                \"authorities\": [\n                    {\n                        \"authority\": \"USER\"\n                    }\n                ],\n                \"username\": \"deshan@gmail.com\",\n                \"accountNonLocked\": true,\n                \"accountNonExpired\": true,\n                \"credentialsNonExpired\": true\n            },\n            \"likes\": []\n        },\n        {\n            \"postId\": 1,\n            \"text\": \"Hi network! Started to work as software Engineer at Musalasoft!\",\n            \"visibility\": \"PUBLIC\",\n            \"postedOn\": \"2024-05-25T20:56:28.058555\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstname\": \"deshan\",\n                \"lastname\": \"salitha\",\n                \"email\": \"deshan@gmail.com\",\n                \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n                \"isRepresentative\": false,\n                \"isGroup\": false,\n                \"friends\": [],\n                \"followers\": [],\n                \"group\": null,\n                \"role\": \"USER\",\n                \"enabled\": true,\n                \"authorities\": [\n                    {\n                        \"authority\": \"USER\"\n                    }\n                ],\n                \"username\": \"deshan@gmail.com\",\n                \"accountNonLocked\": true,\n                \"accountNonExpired\": true,\n                \"credentialsNonExpired\": true\n            },\n            \"likes\": []\n        }\n    ],\n    \"status\": \"Success\",\n    \"message\": \"Successfully fetched\"\n}"
+						}
+					]
+				},
+				{
+					"name": "like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/posts/wall/like/1?userId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"wall",
+								"like",
+								"1"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "like",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/posts/wall/unlike/1?userId=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										"wall",
+										"unlike",
+										"1"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 05:00:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": 1,\n    \"status\": \"Success\",\n    \"message\": \"Successfully fetched\"\n}"
+						}
+					]
+				},
+				{
+					"name": "unlike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/posts/wall/unlike/1?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"wall",
+								"unlike",
+								"1"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "unlike",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/posts/wall/unlike/1?userId=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										"wall",
+										"unlike",
+										"1"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 05:02:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": 1,\n    \"status\": \"Success\",\n    \"message\": \"Successfully fetched\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 05:04:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": [\n        {\n            \"id\": 1,\n            \"firstname\": \"deshan\",\n            \"lastname\": \"salitha\",\n            \"email\": \"deshan@gmail.com\",\n            \"password\": \"$2a$10$Ipo9q1o3B11vxDW2Txz5vuPxDyOHCPp9uKle3eHJwwu7JNxiljPrm\",\n            \"isRepresentative\": false,\n            \"isGroup\": false,\n            \"friends\": [],\n            \"followers\": [],\n            \"group\": null,\n            \"role\": \"USER\",\n            \"enabled\": true,\n            \"authorities\": [\n                {\n                    \"authority\": \"USER\"\n                }\n            ],\n            \"username\": \"deshan@gmail.com\",\n            \"accountNonLocked\": true,\n            \"accountNonExpired\": true,\n            \"credentialsNonExpired\": true\n        },\n        {\n            \"id\": 2,\n            \"firstname\": \"deshan\",\n            \"lastname\": \"salitha\",\n            \"email\": \"deshan.sh@gmail.com\",\n            \"password\": \"$2a$10$YXpbSkHQeKODR5YwBGBZB.kqZVpqu68bYk8rjjI6q8/2PZ7jWGTdK\",\n            \"isRepresentative\": false,\n            \"isGroup\": false,\n            \"friends\": [],\n            \"followers\": [],\n            \"group\": null,\n            \"role\": \"USER\",\n            \"enabled\": true,\n            \"authorities\": [\n                {\n                    \"authority\": \"USER\"\n                }\n            ],\n            \"username\": \"deshan.sh@gmail.com\",\n            \"accountNonLocked\": true,\n            \"accountNonExpired\": true,\n            \"credentialsNonExpired\": true\n        }\n    ],\n    \"status\": \"success\",\n    \"message\": \"fetched\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add friend",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/1/friends/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1",
+								"friends",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add friend",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/1/friends/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1",
+										"friends",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 05:26:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": 1,\n    \"status\": \"Success\",\n    \"message\": \"Successfully added the friend\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add followers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/1/followers/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1",
+								"followers",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add friend Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/1/followers/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1",
+										"followers",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2024 05:26:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": 1,\n    \"status\": \"Success\",\n    \"message\": \"Successfully followed the friend\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXNoYW4uc2hAZ21haWwuY29tIiwiaWF0IjoxNzE2NzUxNTU5LCJleHAiOjE3MTY3NTI5OTl9.YOStamt4nAfijPZUnbUNTdJ0RqknSs3eLTCjLf6dHxA"
+		}
+	]
+}

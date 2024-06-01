@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.socialnetwork.sg.service.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.142 s -- in com.socialnetwork.sg.service.UserServiceTest
